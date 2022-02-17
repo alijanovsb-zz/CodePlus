@@ -1,0 +1,128 @@
+.header {
+  border: 1px solid #000;
+  border-radius: 35px;
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 1%;
+
+  &.fix-true {
+    position: fixed;
+  }
+
+  > ._content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+
+    > ._navigation {
+      flex: 1;
+
+      > ._navigationContent {
+        display: flex;
+        justify-content: flex-start;
+
+        > a {
+          margin-left: 41px;
+        }
+      }
+    }
+
+    > ._buttonContainer {
+      display: block;
+    }
+
+    > ._mobileMenuButton {
+      display: none;
+      position: absolute;
+      z-index: 11;
+      width: 30px;
+      height: 3px;
+      background: #f15525;
+      right: 7%;
+
+      &.fix-true {
+        right: 3%;
+      }
+
+      &.click-true {
+        height: 0;
+        &::before {
+          transform: rotate(45deg);
+          margin-top: 0;
+          background: #bcbcbc;
+        }
+        &::after {
+          transform: rotate(-45deg);
+          margin-top: 0;
+          background: #bcbcbc;
+        }
+      }
+
+      &::before,
+      &::after {
+        content: " ";
+        display: none;
+        position: absolute;
+        background: #f15525;
+        width: 30px;
+        height: 3px;
+        transition: transform 0.2s ease-in-out;
+      }
+
+      &::before {
+        margin-top: 10px;
+      }
+
+      &::after {
+        margin-top: -10px;
+      }
+
+      @media screen and (max-width: 48em) {
+        display: block;
+
+        &::before,
+        &::after {
+          display: block;
+        }
+      }
+    }
+
+    @media screen and (max-width: 48em) {
+      > ._navigation {
+        position: fixed;
+        width: 80%;
+        z-index: 10;
+        right: -1000px;
+        top: 2.5%;
+        height: 95%;
+        transition: 0.5s ease-in-out;
+        align-items: center;
+        background: #fff;
+        border-radius: 35px;
+
+        &.show-true {
+          right: 3%;
+
+          > nav {
+            margin-top: 10%;
+            padding: 0 10%;
+            display: grid;
+            height: 100%;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(3, 30px);
+            text-align: left;
+          }
+        }
+      }
+
+      > ._buttonContainer {
+        display: none;
+      }
+    }
+  }
+
+  @media screen and (max-width: 48em) {
+    margin-top: 5%;
+  }
+}
