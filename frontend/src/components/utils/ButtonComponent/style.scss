@@ -3,6 +3,7 @@
   color: #fff;
   display: flex;
   align-items: center;
+  justify-content: center;
   border: none;
   border-radius: 35px;
   padding: 10px;
@@ -10,5 +11,9 @@
 
   > ._label {
     margin-right: 10px;
+
+    &.empty {
+      margin-right: 0;
+    }
   }
 }

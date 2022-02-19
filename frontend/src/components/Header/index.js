@@ -15,7 +15,7 @@ const Header = () => {
   ];
 
   const changeNavbar = () => {
-    window.scrollY > 100 ? setFixedNavbar(true) : setFixedNavbar(false);
+    window.scrollY > 50 ? setFixedNavbar(true) : setFixedNavbar(false);
   };
 
   const menuToggle = () => {

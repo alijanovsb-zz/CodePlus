@@ -2,10 +2,12 @@ import React from "react";
 import "./style.scss";
 
 const Button = (props) => {
+  const { label, icon } = props;
+
   return (
     <button className="button">
-      <span className="_label">{props.label}</span>
-      <span className="_icon">{props.icon}</span>
+      <span className={`_label ${label === "" && "empty"}`}>{label}</span>
+      <span className="_icon">{icon}</span>
     </button>
   );
 };
