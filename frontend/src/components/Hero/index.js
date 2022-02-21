@@ -1,6 +1,6 @@
 import React from "react";
 import Button from "../utils/ButtonComponent";
-import { BsArrowUpRight, BsArrowDown } from "react-icons/bs";
+import { BsArrowUpRight, BsArrowDownCircle } from "react-icons/bs";
 import "./style.scss";
 
 const Hero = () => {
@@ -8,28 +8,32 @@ const Hero = () => {
     <div className="hero">
       <div className="_content">
         <div className="_left">
-          <div className="_title">
-            <h2>
-              Школа &#123;программирования&#125; для тех, кому нужны реальные
+          <div className="_titleContainer">
+            <span className="_title">
+              Школа &#123;программирования&#125; для тех, кому нужны актуальные
               навыки, а не просто сертификат
-            </h2>
+            </span>
           </div>
           <div className="separator"></div>
-          <div className="_subTitle">
-            <h6>
+          <div className="_subTitleContainer">
+            <span className="_subtitle">
               Заполните форму, чтобы получить доступ к бесплатным вводным
               урокам.
-            </h6>
+            </span>
           </div>
           <div className="_buttonContainer">
-            <Button label="Начать обучение" icon={<BsArrowUpRight />} />
+            <Button
+              label="Начать обучение"
+              icon={<BsArrowUpRight />}
+              style={{ padding: "20px", fontSize: "20px", fontWeight: "400" }}
+            />
           </div>
         </div>
         <div className="_right">
           <img src="../heroImage.png" alt="scripting" width={"50%"} />
         </div>
         <div className="_scrollButton">
-          <Button icon={<BsArrowDown />} label="" />
+          <BsArrowDownCircle />
         </div>
       </div>
     </div>

@@ -19,6 +19,13 @@
     margin: 0 auto;
     background: #fff;
 
+    > ._logo {
+      > ._title {
+        font-size: 32px;
+        font-weight: 600;
+      }
+    }
+
     > ._navigation {
       flex: 1;
 
@@ -28,6 +35,8 @@
 
         > a {
           margin-left: 41px;
+          font-size: 13px;
+          font-weight: 400;
         }
       }
     }
@@ -47,11 +56,13 @@
 
       &.click-true {
         height: 0;
+
         &::before {
           transform: rotate(45deg);
           margin-top: 0;
           background: #bcbcbc;
         }
+
         &::after {
           transform: rotate(-45deg);
           margin-top: 0;

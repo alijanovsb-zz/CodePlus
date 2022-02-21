@@ -3,7 +3,7 @@
 .hero {
   width: 90%;
   margin: 0 auto;
-  padding-top: 5%;
+  padding-bottom: 40px;
 
   > ._content {
     display: flex;
@@ -12,13 +12,34 @@
     > ._left {
       width: 75%;
 
+      > ._titleContainer {
+        > ._title {
+          font-size: 38px;
+          font-weight: 500;
+
+          @media screen and (max-width: 48em) {
+            font-size: 24px;
+          }
+        }
+      }
+
       > .separator {
         background: #dedede;
         width: 100%;
         height: 1px;
+        margin: 5% 0;
+      }
+
+      > ._subTitleContainer {
+        > ._subTitle {
+          font-size: 16px;
+          font-weight: 400;
+        }
       }
 
       > ._buttonContainer {
+        margin: 5% 0;
+
         > button {
           @media screen and (max-width: 48em) {
             width: 100%;
@@ -43,9 +64,14 @@
 
     > ._scrollButton {
       position: relative;
-      bottom: 0;
+      bottom: -45px;
       right: 50%;
       align-self: end;
+
+      > svg {
+        font-size: 32px;
+        fill: #000;
+      }
 
       @media screen and (max-width: 64em) {
         position: relative;
@@ -53,9 +79,12 @@
         justify-content: center;
       }
 
-      @media screen and (max-width: 37.5em) {
+      @media screen and (max-width: 48em) {
         right: initial;
         left: initial;
+      }
+
+      @media screen and (max-width: 37.5em) {
         align-self: initial;
       }
     }
@@ -65,7 +94,7 @@
 
       > div {
         width: 100% !important;
-        padding-bottom: 60px;
+        padding-bottom: 30px;
       }
     }
   }

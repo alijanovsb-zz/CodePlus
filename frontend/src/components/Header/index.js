@@ -40,7 +40,11 @@ const Header = () => {
           </nav>
         </div>
         <div className="_buttonContainer">
-          <Button label="Начать обучение" icon={<BsArrowUpRight />} />
+          <Button
+            label="Начать обучение"
+            icon={<BsArrowUpRight />}
+            style={{ padding: "10px", fontWeight: "400" }}
+          />
         </div>
         <div
           className={`_mobileMenuButton click-${menuOpen} fix-${fixedNavbar}`}

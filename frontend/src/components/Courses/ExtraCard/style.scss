@@ -1,0 +1,30 @@
+.extra {
+  border-radius: 35px;
+  background-color: #eaf2f5;
+  padding: 40px;
+  width: 25%;
+  margin: 1% auto;
+
+  > div {
+    margin: 20px 0;
+  }
+
+  > ._topSection {
+    display: flex;
+    justify-content: center;
+  }
+
+  > ._titleContainer {
+    > ._title {
+      font-size: 16px;
+      font-weight: 600;
+    }
+  }
+
+  > ._subTitleContainer {
+    > ._subTitle {
+      font-size: 13px;
+      font-weight: 400;
+    }
+  }
+}

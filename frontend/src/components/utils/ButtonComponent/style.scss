@@ -6,14 +6,10 @@
   justify-content: center;
   border: none;
   border-radius: 35px;
-  padding: 10px;
+  font-weight: 500;
   cursor: pointer;
 
   > ._label {
     margin-right: 10px;
-
-    &.empty {
-      margin-right: 0;
-    }
   }
 }
