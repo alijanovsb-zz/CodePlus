@@ -38,7 +38,7 @@ const Courses = () => {
       description:
         "Изучаем основу веб-разработки и создание сайтов. Созададим собственный сайт на интересную тему с нуля.",
       target: "13-17 all",
-      stack: "HTML5, CSS3 и Javascript",
+      stack: "HTML5, CSS3, Javascript и Git",
     },
   ];
 

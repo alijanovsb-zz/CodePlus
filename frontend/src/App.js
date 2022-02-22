@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import EducationProcess from "./components/EducationProcess";
 import "./style.App.css";
+import ExtraInfo from "./components/ExtraInfo";
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
       <Hero />
       <Courses />
       <EducationProcess />
+      <ExtraInfo />
     </div>
   );
 };
