@@ -53,12 +53,12 @@
       display: flex;
       justify-content: flex-end;
 
+      > img {
+          width: 50%;
+        }
+
       @media screen and (max-width: 48em) {
         justify-content: center;
-
-        > img {
-          width: 100%;
-        }
       }
     }
 

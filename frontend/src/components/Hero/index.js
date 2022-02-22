@@ -30,7 +30,7 @@ const Hero = () => {
           </div>
         </div>
         <div className="_right">
-          <img src="../heroImage.png" alt="scripting" width={"50%"} />
+          <img src="../heroImage.png" alt="scripting" />
         </div>
         <div className="_scrollButton">
           <BsArrowDownCircle />

@@ -2,6 +2,7 @@ import React from "react";
 import Courses from "./components/Courses";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
+import EducationProcess from "./components/EducationProcess";
 import "./style.App.css";
 
 const App = () => {
@@ -10,6 +11,7 @@ const App = () => {
       <Header />
       <Hero />
       <Courses />
+      <EducationProcess />
     </div>
   );
 };

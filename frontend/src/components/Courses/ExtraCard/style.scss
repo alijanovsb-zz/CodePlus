@@ -16,15 +16,32 @@
 
   > ._titleContainer {
     > ._title {
+      text-align: center;
       font-size: 16px;
       font-weight: 600;
+
+      @media screen and (max-width: 48em) {
+        font-size: 24px;
+        font-weight: 600;
+      }
     }
   }
 
   > ._subTitleContainer {
     > ._subTitle {
+      text-align: center;
       font-size: 13px;
       font-weight: 400;
+
+      @media screen and (max-width: 48em) {
+        font-size: 18px;
+        font-weight: 400;
+      }
     }
+  }
+
+  @media screen and (max-width: 48em) {
+    width: 100%;
+    margin: 15px auto;
   }
 }
