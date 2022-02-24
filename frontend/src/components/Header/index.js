@@ -22,9 +22,9 @@ const Header = () => {
     setMenuOpen(!menuOpen);
   };
 
-  const closeMenu=()=>{
+  const closeMenu = () => {
     setMenuOpen(false);
-  }
+  };
 
   window.addEventListener("scroll", changeNavbar);
 
@@ -37,7 +37,17 @@ const Header = () => {
         <div className={`_navigation show-${menuOpen}`}>
           <nav className="_navigationContent">
             {navigations.map((navigation, i) => (
-              <Link to={navigation.link} key={i} smooth={true} duration={1000} className="_navItem" onClick={closeMenu} offset={-50}>
+              <Link
+                to={navigation.link}
+                key={i}
+                smooth={true}
+                duration={1000}
+                className="_navItem"
+                onClick={closeMenu}
+                offset={-50}
+                spy={true}
+                activeClass="active"
+              >
                 {navigation.label}
               </Link>
             ))}

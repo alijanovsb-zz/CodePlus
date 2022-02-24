@@ -5,6 +5,8 @@ import Hero from "./components/Hero";
 import EducationProcess from "./components/EducationProcess";
 import "./style.App.css";
 import ExtraInfo from "./components/ExtraInfo";
+import Form from "./components/utils/Form";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -14,6 +16,8 @@ const App = () => {
       <Courses />
       <EducationProcess />
       <ExtraInfo />
+      <Form />
+      <Footer />
     </div>
   );
 };

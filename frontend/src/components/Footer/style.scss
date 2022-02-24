@@ -1,0 +1,46 @@
+.footer {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  > div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  > ._right {
+    > ._logo {
+      display: flex;
+      justify-content: center;
+    }
+
+    > ._iconsContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 30px;
+
+      > svg {
+        background: #fff;
+        border-radius: 50px;
+        padding: 15px;
+        font-size: 24px;
+      }
+    }
+  }
+
+  > ._left {
+    > div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  @media screen and (max-width: 48em) {
+    flex-direction: column;
+  }
+}

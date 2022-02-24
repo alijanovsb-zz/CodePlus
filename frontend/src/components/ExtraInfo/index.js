@@ -29,6 +29,7 @@ const ExtraInfo = () => {
       size: "25%",
     },
   ];
+
   return (
     <div className="extraInfo">
       <div className="_content">
