@@ -1,8 +1,12 @@
-import React from "react";
-// import ContentLoader from "react-content-loader";
+import React, { useEffect } from "react";
+import AOS from "aos";
+// import ContentLoader from "react-content-loader";//for loading
 import "./style.scss";
 
 const CardComponent = (props) => {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  });
   const { text, color, description, target, stack } = props.course;
   const localTarget = target.replace("all", "");
 
@@ -12,6 +16,11 @@ const CardComponent = (props) => {
       style={{
         backgroundColor: color ? color : "#eaf2f5",
       }}
+      data-aos="zoom-in"
+      data-aos-offset="-200"
+      data-aos-delay="50"
+      data-aos-once="true"
+      data-aos-anchor-placement="top-center"
     >
       <div className="_top">
         <span className="_targetAge">{localTarget}</span>

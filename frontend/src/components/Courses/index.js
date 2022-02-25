@@ -1,9 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import AOS from "aos";
 import CardComponent from "./CardComponent";
 import ExtraCard from "./ExtraCard";
 import "./style.scss";
 
 const Courses = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  });
+
   const [activeTabIndex, setActiveTabIndex] = useState(1);
   const [filter, setFilter] = useState("9-13");
 
@@ -85,10 +90,24 @@ const Courses = () => {
   return (
     <div className="courses">
       <div className="_content">
-        <div className="_header">
+        <div
+          className="_header"
+          data-aos="fade-up"
+          data-aos-offset="-200"
+          data-aos-delay="50"
+          data-aos-once="true"
+          data-aos-anchor-placement="top-center"
+        >
           <span className="_title">Какие технологии вы изучите:</span>
         </div>
-        <div className="_brochure">
+        <div
+          className="_brochure"
+          data-aos="flip-up"
+          data-aos-offset="-200"
+          data-aos-delay="100"
+          data-aos-once="true"
+          data-aos-anchor-placement="top-center"
+        >
           <div className="_left">
             <img src="../brochureImage.png" alt="brochure" />
           </div>

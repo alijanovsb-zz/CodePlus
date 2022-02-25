@@ -1,12 +1,24 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
 import Button from "../utils/ButtonComponent";
 import { BsArrowUpRight, BsArrowDownCircle } from "react-icons/bs";
 import "./style.scss";
 
 const Hero = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  });
+
   return (
     <div className="hero">
-      <div className="_content">
+      <div
+        className="_content"
+        data-aos="fade-up"
+        data-aos-offset="200"
+        data-aos-delay="50"
+        data-aos-once="true"
+        data-aos-anchor-placement="top-center"
+      >
         <div className="_left">
           <div className="_titleContainer">
             <span className="_title">
