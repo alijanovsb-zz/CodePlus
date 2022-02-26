@@ -1,7 +1,4 @@
-@use "../utils/_default";
-
 .header {
-  // @include _default.containerRule; unknown problem
   width: 100%;
   margin-top: 1%;
 
@@ -18,7 +15,7 @@
     border-radius: 35px;
     width: 90%;
     margin: 0 auto;
-    background: #fff;
+    background: #ffffff;
 
     > ._logo {
       > ._title {

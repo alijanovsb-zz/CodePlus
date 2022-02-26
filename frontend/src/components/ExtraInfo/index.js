@@ -1,7 +1,8 @@
 import React from "react";
 import "./style.scss";
 
-const ExtraInfo = () => {
+const ExtraInfo = ({ theme }) => {
+  const { backgroundPrimary, backgroundSecondary } = theme;
   const extraDatas = [
     { image: "codeReview.png", text: null, size: "25%" },
     {
@@ -31,13 +32,16 @@ const ExtraInfo = () => {
   ];
 
   return (
-    <div className="extraInfo">
+    <div className="extraInfo" style={{ background: backgroundSecondary }}>
       <div className="_content">
         {extraDatas.map((extraData, i) => (
           <div
             className="_infoItem"
             key={i}
-            style={{ width: extraData.size ? extraData.size : "25%" }}
+            style={{
+              width: extraData.size ? extraData.size : "25%",
+              background: backgroundPrimary,
+            }}
           >
             {extraData.image && (
               <img src={extraData.image} alt={"Code review"} />

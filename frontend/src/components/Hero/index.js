@@ -4,7 +4,7 @@ import Button from "../utils/ButtonComponent";
 import { BsArrowUpRight, BsArrowDownCircle } from "react-icons/bs";
 import "./style.scss";
 
-const Hero = () => {
+const Hero = ({ theme }) => {
   useEffect(() => {
     AOS.init({ duration: 1000 });
   });
@@ -14,7 +14,7 @@ const Hero = () => {
       <div
         className="_content"
         data-aos="fade-up"
-        data-aos-offset="200"
+        data-aos-offset="150"
         data-aos-delay="50"
         data-aos-once="true"
         data-aos-anchor-placement="top-center"

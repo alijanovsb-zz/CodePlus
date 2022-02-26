@@ -1,12 +1,26 @@
 import React, { useState } from "react";
 import { Link } from "react-scroll";
-import { BsArrowUpRight } from "react-icons/bs";
+import {
+  BsArrowUpRight,
+  BsFillMoonStarsFill,
+  BsFillSunFill,
+} from "react-icons/bs";
 import Button from "../utils/ButtonComponent";
 import "./style.scss";
+import { useDispatch } from "react-redux";
+import { uiAction } from "../../app/slices/uiSlice";
 
-const Header = () => {
+const Header = ({ theme }) => {
+  const { name, backgroundSecondary, color } = theme;
+
   const [menuOpen, setMenuOpen] = useState(false);
   const [fixedNavbar, setFixedNavbar] = useState(false);
+
+  const dispatch = useDispatch();
+
+  const themeToggle = () => {
+    dispatch(uiAction.toggleTheme());
+  };
 
   const navigations = [
     { label: "Чему вы научитесь", link: "courses" },
@@ -30,9 +44,11 @@ const Header = () => {
 
   return (
     <div className={`header fix-${fixedNavbar}`}>
-      <div className="_content">
+      <div className="_content" style={{ background: backgroundSecondary }}>
         <div className="_logo">
-          <span className="_title">CodePlus</span>
+          <span className="_title" style={{ color: color }}>
+            CodePlus
+          </span>
         </div>
         <div className={`_navigation show-${menuOpen}`}>
           <nav className="_navigationContent">
@@ -47,10 +63,18 @@ const Header = () => {
                 offset={-50}
                 spy={true}
                 activeClass="active"
+                style={{ color: color }}
               >
                 {navigation.label}
               </Link>
             ))}
+            <div>
+              {name === "light" ? (
+                <BsFillMoonStarsFill onClick={themeToggle} />
+              ) : (
+                <BsFillSunFill onClick={themeToggle} />
+              )}
+            </div>
           </nav>
         </div>
         <div className="_buttonContainer">

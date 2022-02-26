@@ -93,9 +93,10 @@
             background: #eaf2f5;
             border-radius: 35px;
             padding: 10px;
+            font-weight: 600;
 
             &.active {
-              background: #f15525;
+              background: #f15525 !important;
               color: #fff;
             }
 

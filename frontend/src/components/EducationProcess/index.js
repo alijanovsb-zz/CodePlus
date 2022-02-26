@@ -3,7 +3,8 @@ import { BsArrowUpRight } from "react-icons/bs";
 import Button from "../utils/ButtonComponent";
 import "./style.scss";
 
-const EducationProcess = () => {
+const EducationProcess = ({ theme }) => {
+  const { backgroundPrimary, backgroundSecondary, color } = theme;
   const infos = [
     {
       index: "01",
@@ -28,7 +29,7 @@ const EducationProcess = () => {
   return (
     <div className="education_process">
       <div className="_header">
-        <span className="_title">Как происходит обучение на YtYt?</span>
+        <span className="_title">Как происходит обучение в CodePlus?</span>
         <span className="_subTitle">
           Обучение должно быть комфортным. Поэтому мы разработали собственную
           методику для обучения программированию.
@@ -41,7 +42,10 @@ const EducationProcess = () => {
       {/* after selecting, choosing and editing video add this section */}
 
       <div className="_info">
-        <div className="_content">
+        <div
+          className="_content"
+          style={{ background: backgroundSecondary, color: color }}
+        >
           {infos.map((info, i) => (
             <div className="_item" key={i}>
               <div className="_topSection">
@@ -59,7 +63,7 @@ const EducationProcess = () => {
       </div>
 
       <div className="_footer">
-        <div className="_content">
+        <div className="_content" style={{ background: backgroundSecondary }}>
           <Button
             label="Начать обучение"
             icon={<BsArrowUpRight />}

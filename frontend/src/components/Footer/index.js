@@ -4,7 +4,9 @@ import { BsTelegram } from "react-icons/bs";
 import Link from "react-scroll/modules/components/Link";
 import "./style.scss";
 
-const Footer = () => {
+const Footer = ({ theme }) => {
+  const { backgroundPrimary, backgroundSecondary, color } = theme;
+
   const navigations = [
     { label: "Чему вы научитесь", link: "courses" },
     { label: "Процесс обучения", link: "education_process" },
@@ -13,16 +15,16 @@ const Footer = () => {
 
   return (
     <div className="footer">
-      <div className="_right">
+      <div className="_left">
         <div className="_logo">
           <img src="logo.png" alt="codeplus" width={"50%"} />
         </div>
 
         <div className="_iconsContainer">
-          <AiFillInstagram />
-          <BsTelegram />
-          <AiFillFacebook />
-          <AiFillYoutube />
+          <AiFillInstagram style={{ background: backgroundSecondary }} />
+          <BsTelegram style={{ background: backgroundSecondary }} />
+          <AiFillFacebook style={{ background: backgroundSecondary }} />
+          <AiFillYoutube style={{ background: backgroundSecondary }} />
         </div>
       </div>
 
@@ -34,8 +36,8 @@ const Footer = () => {
         ))}
       </div>
 
-      <div className="_left">
-        <div className="_contacts">
+      <div className="_right">
+        <div className="contacts">
           <a href="tel:+998934351706">+998934351706</a>
           <a href="mailto: info@codeplus.uz">info@codeplus.uz</a>
         </div>

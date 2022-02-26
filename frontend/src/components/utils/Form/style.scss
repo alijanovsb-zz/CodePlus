@@ -21,6 +21,16 @@
       align-items: center;
       width: fit-content;
       margin: auto;
+
+      > ._title {
+        font-size: 24px;
+        font-weight: 600;
+      }
+
+      > ._subTitle {
+        font-size: 14px;
+        font-weight: 300;
+      }
     }
 
     > ._inputs {

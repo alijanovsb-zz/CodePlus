@@ -7,14 +7,16 @@ const CardComponent = (props) => {
   useEffect(() => {
     AOS.init({ duration: 1000 });
   });
-  const { text, color, description, target, stack } = props.course;
+  const { text, bgColor, description, target, stack } = props.course;
+  const { backgroundPrimary } = props.style;
+
   const localTarget = target.replace("all", "");
 
   return (
     <div
       className="card"
       style={{
-        backgroundColor: color ? color : "#eaf2f5",
+        backgroundColor: bgColor ? bgColor : "#eaf2f5",
       }}
       data-aos="zoom-in"
       data-aos-offset="-200"
@@ -23,7 +25,9 @@ const CardComponent = (props) => {
       data-aos-anchor-placement="top-center"
     >
       <div className="_top">
-        <span className="_targetAge">{localTarget}</span>
+        <span className="_targetAge" style={{ background: backgroundPrimary }}>
+          {localTarget}
+        </span>
       </div>
       <div className="_center">
         <span className="_text">{text}</span>

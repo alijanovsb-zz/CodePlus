@@ -2,10 +2,12 @@ import React from "react";
 import Button from "../ButtonComponent/index";
 import "./style.scss";
 
-const Form = () => {
+const Form = ({ theme }) => {
+  const { backgroundPrimary, backgroundSecondary, color } = theme;
+
   return (
     <form className="form">
-      <div className="_content">
+      <div className="_content" style={{ background: backgroundSecondary }}>
         <div className="_header">
           <span className="_title">
             Оставьте заявку, и мы поможем выбрать курс
