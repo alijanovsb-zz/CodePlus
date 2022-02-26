@@ -1,7 +1,25 @@
 {
   "dependencies": {
+    "express": "^4.17.3",
     "node-sass": "^7.0.1",
     "react-icons": "^4.3.1",
     "react-scroll": "^1.8.4"
-  }
+  },
+  "name": "codeplus",
+  "version": "1.0.0",
+  "description": "Full stack online learning center",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alijanovsb/CodePlus.git"
+  },
+  "author": "Sardor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alijanovsb/CodePlus/issues"
+  },
+  "homepage": "https://github.com/alijanovsb/CodePlus#readme"
 }

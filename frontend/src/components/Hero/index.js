@@ -3,6 +3,7 @@ import AOS from "aos";
 import Button from "../utils/ButtonComponent";
 import { BsArrowUpRight, BsArrowDownCircle } from "react-icons/bs";
 import "./style.scss";
+import { Link } from "react-scroll";
 
 const Hero = ({ theme }) => {
   const { name } = theme;
@@ -46,7 +47,9 @@ const Hero = ({ theme }) => {
           <img src="../heroImage.png" alt="scripting" />
         </div>
         <div className={`_scrollButton ${name}`}>
-          <BsArrowDownCircle />
+          <Link to="courses">
+            <BsArrowDownCircle />
+          </Link>
         </div>
       </div>
     </div>

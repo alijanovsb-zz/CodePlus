@@ -67,12 +67,12 @@
       align-self: end;
 
       &.dark {
-        > svg {
+        & svg {
           fill: #fff;
         }
       }
 
-      > svg {
+      & svg {
         font-size: 32px;
         fill: #000;
       }
