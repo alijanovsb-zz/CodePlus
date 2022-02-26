@@ -31,6 +31,10 @@
         display: flex;
         justify-content: flex-start;
 
+        > div {
+          margin-left: auto;
+        }
+
         > a {
           margin-left: 41px;
           font-size: 13px;
@@ -117,14 +121,23 @@
         &.show-true {
           right: 3%;
 
+          &.dark {
+            background: #000;
+          }
+
           > nav {
             margin-top: 10%;
             padding: 0 10%;
             display: grid;
             height: 100%;
             grid-template-columns: 1fr;
-            grid-template-rows: repeat(3, 30px);
+            grid-template-rows: repeat(4, 30px);
             text-align: left;
+
+            > ._themeToggler {
+              margin: auto;
+              width: auto;
+            }
           }
         }
       }

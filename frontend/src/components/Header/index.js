@@ -50,7 +50,7 @@ const Header = ({ theme }) => {
             CodePlus
           </span>
         </div>
-        <div className={`_navigation show-${menuOpen}`}>
+        <div className={`_navigation show-${menuOpen} ${name}`}>
           <nav className="_navigationContent">
             {navigations.map((navigation, i) => (
               <Link
@@ -68,7 +68,7 @@ const Header = ({ theme }) => {
                 {navigation.label}
               </Link>
             ))}
-            <div>
+            <div className="_themeToggler">
               {name === "light" ? (
                 <BsFillMoonStarsFill onClick={themeToggle} />
               ) : (
