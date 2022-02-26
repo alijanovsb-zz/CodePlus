@@ -4,7 +4,7 @@ import Button from "../utils/ButtonComponent";
 import "./style.scss";
 
 const EducationProcess = ({ theme }) => {
-  const { backgroundPrimary, backgroundSecondary, color } = theme;
+  const { backgroundSecondary, color } = theme;
   const infos = [
     {
       index: "01",

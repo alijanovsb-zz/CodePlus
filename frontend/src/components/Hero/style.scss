@@ -66,6 +66,12 @@
       right: 50%;
       align-self: end;
 
+      &.dark {
+        > svg {
+          fill: #fff;
+        }
+      }
+
       > svg {
         font-size: 32px;
         fill: #000;

@@ -3,7 +3,7 @@ import Button from "../ButtonComponent/index";
 import "./style.scss";
 
 const Form = ({ theme }) => {
-  const { backgroundPrimary, backgroundSecondary, color } = theme;
+  const { backgroundSecondary } = theme;
 
   return (
     <form className="form">

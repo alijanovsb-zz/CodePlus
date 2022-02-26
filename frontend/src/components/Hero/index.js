@@ -5,6 +5,7 @@ import { BsArrowUpRight, BsArrowDownCircle } from "react-icons/bs";
 import "./style.scss";
 
 const Hero = ({ theme }) => {
+  const { name } = theme;
   useEffect(() => {
     AOS.init({ duration: 1000 });
   });
@@ -44,7 +45,7 @@ const Hero = ({ theme }) => {
         <div className="_right">
           <img src="../heroImage.png" alt="scripting" />
         </div>
-        <div className="_scrollButton">
+        <div className={`_scrollButton ${name}`}>
           <BsArrowDownCircle />
         </div>
       </div>

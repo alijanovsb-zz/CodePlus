@@ -5,7 +5,7 @@ import Link from "react-scroll/modules/components/Link";
 import "./style.scss";
 
 const Footer = ({ theme }) => {
-  const { backgroundPrimary, backgroundSecondary, color } = theme;
+  const { backgroundSecondary } = theme;
 
   const navigations = [
     { label: "Чему вы научитесь", link: "courses" },
