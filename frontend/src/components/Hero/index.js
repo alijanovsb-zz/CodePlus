@@ -4,12 +4,21 @@ import Button from "../utils/ButtonComponent";
 import { BsArrowUpRight, BsArrowDownCircle } from "react-icons/bs";
 import "./style.scss";
 import { Link } from "react-scroll";
+import { useDispatch } from "react-redux";
+import { uiAction } from "../../app/slices/uiSlice";
 
 const Hero = ({ theme }) => {
   const { name } = theme;
+
   useEffect(() => {
     AOS.init({ duration: 1000 });
   });
+
+  const dispatch = useDispatch();
+
+  const modalToggler = () => {
+    dispatch(uiAction.toggleModal());
+  };
 
   return (
     <div className="hero">
@@ -40,6 +49,7 @@ const Hero = ({ theme }) => {
               label="Начать обучение"
               icon={<BsArrowUpRight />}
               style={{ padding: "20px", fontSize: "20px", fontWeight: "400" }}
+              onClick={modalToggler}
             />
           </div>
         </div>

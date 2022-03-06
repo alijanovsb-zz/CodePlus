@@ -10,9 +10,11 @@ import "./App.scss";
 import "aos/dist/aos.css";
 import { useSelector } from "react-redux";
 import { darkTheme, lightTheme } from "./styles/themes";
+import Modal from "./components/utils/Form/Modal";
 
 const App = () => {
-  const { theme } = useSelector((state) => state.ui);
+  const { theme, modal } = useSelector((state) => state.ui);
+
   const currentTheme = theme === "light" ? lightTheme : darkTheme;
 
   window.document.body.style.background = currentTheme.backgroundPrimary;
@@ -27,6 +29,7 @@ const App = () => {
       <ExtraInfo theme={currentTheme} />
       <Form theme={currentTheme} />
       <Footer theme={currentTheme} />
+      <Modal modalState={modal} />
     </>
   );
 };

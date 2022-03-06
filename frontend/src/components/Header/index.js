@@ -20,6 +20,7 @@ const Header = ({ theme }) => {
 
   const themeToggle = () => {
     dispatch(uiAction.toggleTheme());
+    localStorage.setItem("theme", theme.name);
   };
 
   const navigations = [
