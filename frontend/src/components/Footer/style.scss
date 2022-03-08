@@ -14,6 +14,10 @@
       font-size: 14px;
       font-weight: 500;
     }
+
+    @media screen and (max-width: 48em) {
+      margin-bottom: 10px;
+    }
   }
 
   > ._left {
@@ -45,7 +49,6 @@
 
       > a {
         text-decoration: none;
-        color: #fff;
       }
     }
   }

@@ -31,18 +31,8 @@
         display: flex;
         justify-content: flex-start;
 
-        > div {
+        > ._themeToggler {
           margin-left: auto;
-        }
-
-        > a {
-          margin-left: 41px;
-          font-size: 13px;
-          font-weight: 400;
-
-          &.active {
-            font-weight: 600;
-          }
         }
       }
     }

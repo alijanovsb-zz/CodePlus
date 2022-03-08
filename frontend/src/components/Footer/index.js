@@ -1,17 +1,11 @@
 import React from "react";
 import { AiFillInstagram, AiFillFacebook, AiFillYoutube } from "react-icons/ai";
 import { BsTelegram } from "react-icons/bs";
-import Link from "react-scroll/modules/components/Link";
+import NavLinks from "../utils/NavLinks";
 import "./style.scss";
 
 const Footer = ({ theme }) => {
-  const { backgroundSecondary } = theme;
-
-  const navigations = [
-    { label: "Чему вы научитесь", link: "courses" },
-    { label: "Процесс обучения", link: "education_process" },
-    { label: "Контакты", link: "contacts" },
-  ];
+  const { backgroundSecondary, color } = theme;
 
   return (
     <div className="footer">
@@ -29,17 +23,24 @@ const Footer = ({ theme }) => {
       </div>
 
       <div className="_center">
-        {navigations.map((navigation, i) => (
-          <Link to={navigation.link} key={i}>
-            {navigation.label}
-          </Link>
-        ))}
+        <NavLinks
+          styles={{
+            color: color,
+            fontSize: "14px",
+            fontWeight: "500",
+            marginLeft: 0,
+          }}
+        />
       </div>
 
       <div className="_right">
         <div className="contacts">
-          <a href="tel:+998934351706">+998934351706</a>
-          <a href="mailto: info@codeplus.uz">info@codeplus.uz</a>
+          <a href="tel:+998934351706" style={{ color: color }}>
+            +998934351706
+          </a>
+          <a href="mailto: info@codeplus.uz" style={{ color: color }}>
+            info@codeplus.uz
+          </a>
         </div>
 
         <div className="_companyDetail">

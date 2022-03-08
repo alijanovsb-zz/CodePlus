@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link } from "react-scroll";
 import {
   BsArrowUpRight,
   BsFillMoonStarsFill,
@@ -9,6 +8,7 @@ import Button from "../utils/ButtonComponent";
 import "./style.scss";
 import { useDispatch } from "react-redux";
 import { uiAction } from "../../app/slices/uiSlice";
+import NavLinks from "../utils/NavLinks";
 
 const Header = ({ theme }) => {
   const { name, backgroundSecondary, color } = theme;
@@ -20,13 +20,12 @@ const Header = ({ theme }) => {
 
   const themeToggle = () => {
     dispatch(uiAction.toggleTheme());
+    localStorage.setItem("theme", theme.name);
   };
 
-  const navigations = [
-    { label: "Чему вы научитесь", link: "courses" },
-    { label: "Процесс обучения", link: "education_process" },
-    { label: "Контакты", link: "contacts" },
-  ];
+  const modalToggle = () => {
+    dispatch(uiAction.toggleModal());
+  };
 
   const changeNavbar = () => {
     window.scrollY > 50 ? setFixedNavbar(true) : setFixedNavbar(false);
@@ -52,22 +51,7 @@ const Header = ({ theme }) => {
         </div>
         <div className={`_navigation show-${menuOpen} ${name}`}>
           <nav className="_navigationContent">
-            {navigations.map((navigation, i) => (
-              <Link
-                to={navigation.link}
-                key={i}
-                smooth={true}
-                duration={1000}
-                className="_navItem"
-                onClick={closeMenu}
-                offset={-50}
-                spy={true}
-                activeClass="active"
-                style={{ color: color }}
-              >
-                {navigation.label}
-              </Link>
-            ))}
+            <NavLinks styles={{ color: color }} onClick={closeMenu} />
             <div className="_themeToggler">
               {name === "light" ? (
                 <BsFillMoonStarsFill onClick={themeToggle} />
@@ -82,6 +66,7 @@ const Header = ({ theme }) => {
             label="Начать обучение"
             icon={<BsArrowUpRight />}
             style={{ padding: "10px", fontWeight: "400" }}
+            onClick={modalToggle}
           />
         </div>
         <div

@@ -2,6 +2,8 @@ import React from "react";
 import { BsArrowUpRight } from "react-icons/bs";
 import Button from "../utils/ButtonComponent";
 import "./style.scss";
+import { useDispatch } from "react-redux";
+import { uiAction } from "../../app/slices/uiSlice";
 
 const EducationProcess = ({ theme }) => {
   const { backgroundSecondary, color } = theme;
@@ -25,6 +27,11 @@ const EducationProcess = ({ theme }) => {
         "Можно совмещать учёбу с работой и другими делами. Не нужно выпрашивать академический отпуск, если пришлось сделать перерыв.",
     },
   ];
+
+  const dispatch = useDispatch();
+  const modalToggle = () => {
+    dispatch(uiAction.toggleModal());
+  };
 
   return (
     <div className="education_process">
@@ -68,6 +75,7 @@ const EducationProcess = ({ theme }) => {
             label="Начать обучение"
             icon={<BsArrowUpRight />}
             style={{ padding: "20px", fontSize: "16px", fontWeight: "400" }}
+            onClick={modalToggle}
           />
 
           <span className="_extraInfo">

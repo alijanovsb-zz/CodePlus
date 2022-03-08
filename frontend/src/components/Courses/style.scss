@@ -53,6 +53,14 @@
             padding: 10px;
             color: #fff;
             border-radius: 35px;
+            font-weight: 600;
+
+            @media screen and (max-width: 36em) {
+              font-size: 10px;
+              margin-right: 5px;
+              margin-bottom: 5px;
+              padding: 10px;
+            }
           }
         }
 

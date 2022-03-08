@@ -1,0 +1,15 @@
+._navItem {
+  cursor: pointer;
+  margin-left: 40px;
+  font-size: 13px;
+  font-weight: 400;
+  align-items: end;
+
+  &.active {
+    font-weight: 600;
+  }
+
+  @media screen and (max-width: 64em) {
+    margin-left: 20px;
+  }
+}
